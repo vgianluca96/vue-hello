@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Hello</title>
+
+    <style>
+
+        .text-green {
+            color: green;
+        }
+
+        .text-red {
+            color: red;
+        }
+
+    </style>
+
 </head>
 <body>
 
     <div id="app">
 
-        <h1>
-            {{message}}
-        </h1>
+        <div>
+            <h1 v-bind:class="fontColor">
+                {{message}}
+            </h1>
+    
+            <button @click="changeColor">
+                Change font color
+            </button>
+        </div>
 
         <div>
             <img v-bind:src="myImg" alt="">
